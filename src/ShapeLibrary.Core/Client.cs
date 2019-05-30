@@ -21,7 +21,8 @@ namespace ShapeLibrary.Core
 
         public bool IsRightTriangle(double aSide, double bSide, double cSide)
         {
-            throw new System.NotImplementedException();
+            var triangle = new Triangle(aSide, bSide, cSide);
+            return triangle.HasRightAngle();
         }
     }
 }
