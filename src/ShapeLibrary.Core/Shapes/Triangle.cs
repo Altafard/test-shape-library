@@ -39,9 +39,11 @@ namespace ShapeLibrary.Core.Shapes
             _p = (aSide + bSide + cSide) / 2;
         }
 
+        public bool IsRightAngle => HasRightAngle();
+
         public double CalculateArea() => Math.Sqrt(_p * (_p - _aSide) * (_p - _bSide) * (_p - _cSide));
 
-        public bool HasRightAngle() => HasRightAngle(_aSide, _bSide, _cSide);
+        private bool HasRightAngle() => HasRightAngle(_aSide, _bSide, _cSide);
 
         private static bool HasRightAngle(params double[] numbers)
         {
